@@ -10,7 +10,7 @@ Help the user get connected to UpRock and verify the plugin works.
 
 1. **API key.** This plugin reads the API key from its plugin configuration (`api_key`), which Claude Code prompts for when the plugin is enabled and stores securely in the OS keychain.
    - If the user has not set a key yet, tell them to:
-     1. Sign up free at **https://uprock.ai** (free credits included — no card required).
+     1. Sign up at **https://uprock.ai**.
      2. Create a key at **https://uprock.ai/app/api-keys** and copy the full key (shown once). The MCP setup page at https://uprock.ai/app/mcp also shows the ready-to-paste `https://mcp.uprock.ai/<key>/mcp` URL.
      3. Re-run plugin configuration: `/plugin` → select **uprock** → **Configure**, and paste the key into **UpRock API Key**. (Advanced: set **MCP Base URL** only for staging/self-hosted; otherwise leave the default `https://mcp.uprock.ai`.)
    - The key is injected into the bundled `uprock` MCP server URL automatically — the user never pastes it into a file.

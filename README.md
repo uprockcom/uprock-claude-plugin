@@ -25,7 +25,7 @@ You can also just ask in plain language — "scrape this URL", "search the web f
    ```
    /plugin install uprock@<marketplace>
    ```
-2. **Get a free API key.** Sign up at **https://uprock.ai** (free credits included), then create a key at **https://uprock.ai/app/api-keys**. (The MCP setup page at https://uprock.ai/app/mcp also shows your ready-to-use MCP URL.)
+2. **Get your API key** at **https://uprock.ai**: sign up, then create a key at **https://uprock.ai/app/api-keys**. (The MCP setup page at https://uprock.ai/app/mcp also shows your ready-to-use MCP URL.)
 3. When prompted at install/enable, paste your key into **UpRock API Key**. (Or later: `/plugin` → **uprock** → **Configure**.) It is stored securely in your OS keychain and injected into the MCP connection automatically — never written to a file.
 4. Run `/uprock:setup` to smoke-test the connection.
 

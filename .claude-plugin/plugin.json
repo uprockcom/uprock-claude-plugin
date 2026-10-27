@@ -27,7 +27,7 @@
     "api_key": {
       "type": "string",
       "title": "UpRock API Key",
-      "description": "Your UpRock API key. Sign up free at https://uprock.ai and create a key at https://uprock.ai/app/api-keys (free credits included).",
+      "description": "Your UpRock API key. Get it at https://uprock.ai (create a key at https://uprock.ai/app/api-keys).",
       "sensitive": true,
       "required": true
     },
