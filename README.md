@@ -2,15 +2,15 @@
 
 **Scrape, search, crawl, and sweep the web from a real global device network.**
 
-UpRock turns any website into clean, LLM-ready markdown — with real-browser rendering, anti-bot handling, and per-country geo placement — searches the web across multiple engines and regions at once, and tests uptime and performance from **real devices worldwide**. It includes an autonomous research agent: describe the data you need in plain language and it finds, navigates, and extracts it across multiple sites.
+UpRock turns any website into clean, LLM-ready markdown — with real-browser rendering and per-country geo placement — searches the web across multiple engines and regions at once, and tests uptime and performance from **real devices worldwide**. It includes an autonomous research agent: describe the data you need in plain language and it finds, navigates, and extracts it across multiple sites.
 
-Unlike datacenter-proxy scrapers, UpRock runs on a distributed network of real mobile and desktop devices around the globe, so requests look like genuine local users — and you can place a crawl or search in a specific region to see exactly what locals see.
+Unlike datacenter-proxy scrapers, UpRock runs on a distributed network of real mobile and desktop devices around the globe. Place a crawl or search in a specific region to see exactly what locals see.
 
 ## Capabilities
 
 | Command | What it does |
 | --- | --- |
-| `/uprock:scrape` | Extract a single page as clean markdown (JS rendering, anti-bot, geo placement). |
+| `/uprock:scrape` | Extract a single page as clean markdown (JS rendering, geo placement). |
 | `/uprock:crawl` | Crawl multiple pages of a site and return their content as markdown. |
 | `/uprock:search` | Search the web across multiple engines and countries, deduplicated. |
 | `/uprock:sweep` | Test a URL's uptime & performance (Core Web Vitals) from real devices across regions. |
