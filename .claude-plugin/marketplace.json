@@ -10,7 +10,7 @@
     {
       "name": "uprock",
       "source": "./",
-      "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with anti-bot, JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent.",
+      "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent.",
       "category": "development",
       "homepage": "https://uprock.ai",
       "license": "MIT",

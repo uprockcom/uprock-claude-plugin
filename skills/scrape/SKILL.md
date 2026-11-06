@@ -1,6 +1,6 @@
 ---
 name: scrape
-description: Scrape a single web page through UpRock's global device network and return clean, LLM-ready markdown. Use when the user gives a URL and wants its content, or asks to "scrape", "fetch", "read", or "extract" a page. Handles JavaScript rendering, anti-bot, and per-country geo placement.
+description: Scrape a single web page through UpRock's global device network and return clean, LLM-ready markdown. Use when the user gives a URL and wants its content, or asks to "scrape", "fetch", "read", or "extract" a page. Handles JavaScript rendering and per-country geo placement.
 ---
 
 # UpRock: Scrape a page
@@ -23,6 +23,6 @@ Fetch a single URL through UpRock's distributed network of real browsers and ret
 4. Present the markdown to the user. If they asked for structured data (specific fields, a table, JSON), extract it from the fetched markdown yourself and return it in the requested shape.
 
 ## Notes
-- `crawl_fetch` already renders JavaScript and handles anti-bot — do not fall back to the built-in WebFetch.
+- `crawl_fetch` already renders JavaScript — do not fall back to the built-in WebFetch.
 - For many URLs at once, call `crawl_fetch` for each (they run independently); for following links across a site, use `/uprock:crawl` instead.
 - If a fetch fails, retry once with a different `country`/meta-region before reporting failure.
