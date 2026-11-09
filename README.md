@@ -1,6 +1,6 @@
 # UpRock for Claude Code
 
-**Scrape, search, crawl, and sweep the web from a real global device network.**
+**Scrape, search, crawl, and verify the web from a real global device network, and search public video by moment.**
 
 UpRock turns any website into clean, LLM-ready markdown — with real-browser rendering and per-country geo placement — searches the web across multiple engines and regions at once, and tests uptime and performance from **real devices worldwide**. It includes an autonomous research agent: describe the data you need in plain language and it finds, navigates, and extracts it across multiple sites.
 
@@ -14,10 +14,11 @@ Unlike datacenter-proxy scrapers, UpRock runs on a distributed network of real m
 | `/uprock:crawl` | Crawl multiple pages of a site and return their content as markdown. |
 | `/uprock:search` | Search the web across multiple engines and countries, deduplicated. |
 | `/uprock:sweep` | Test a URL's uptime & performance (Core Web Vitals) from real devices across regions. |
+| `/uprock:video` | Find the moment in public video where something is shown or said, with time stamps, and read it. |
 | `/uprock:agent` | Describe the data you need — the agent autonomously searches, fetches, and extracts it. |
 | `/uprock:setup` | Configure your API key and verify everything works. |
 
-You can also just ask in plain language — "scrape this URL", "search the web for X", "is my site up worldwide?" — and Claude will use the UpRock tools directly.
+You can also just ask in plain language — "scrape this URL", "search the web for X", "is my site up worldwide?", "find a video that shows X" — and Claude will use the UpRock tools directly.
 
 ## Setup
 
@@ -39,13 +40,11 @@ This plugin bundles UpRock's hosted **MCP server** (Streamable HTTP). It connect
 - `crawl_fetch` — fetch a URL through the device network (returns markdown + HTML as `crawl://` resources)
 - `resource_fetch` — read the full content of a `crawl://` or `sweep://` resource
 - `web_research` — multi-engine, multi-region web search
-- `sweep` — multi-region uptime & performance test
+- `verify` — multi-region uptime & performance test (`sweep` is its old name and still works)
+- `video_search` — find moments in public video by meaning, with time stamps
+- `video_moment` — read what is shown and said in a stretch of one video
 
 The slash commands above are thin orchestration layers over these tools.
-
-## Roadmap
-
-- **Semantic video search** — UpRock's video search (find the exact moment across indexed video by meaning) is available today via the REST API for early-access partners and will be added here once it ships as an MCP tool. Contact developer@uprock.com for early access.
 
 ## Privacy & security
 
