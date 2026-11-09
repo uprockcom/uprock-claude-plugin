@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "uprock",
   "displayName": "UpRock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent.",
   "author": {
     "name": "UpRock",
