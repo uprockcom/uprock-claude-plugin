@@ -2,8 +2,8 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "uprock",
   "displayName": "UpRock",
-  "version": "1.0.0",
-  "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent.",
+  "version": "1.1.0",
+  "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent and search over public video by moment.",
   "author": {
     "name": "UpRock",
     "email": "developer@uprock.com",
@@ -21,7 +21,8 @@
     "uptime",
     "performance",
     "geo",
-    "mcp"
+    "mcp",
+    "video"
   ],
   "userConfig": {
     "api_key": {

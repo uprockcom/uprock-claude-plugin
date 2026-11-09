@@ -9,7 +9,7 @@ Load a URL from real devices in multiple regions at once and report reliability 
 
 ## How to do it
 
-1. Call the `uprock` MCP tool **`sweep`** with:
+1. Call the `uprock` MCP tool **`verify`** with (`sweep` is its old name and still works):
    - `url`: target URL (required).
    - `regions`: subset of `NA`, `EU`, `APAC`, `LATAM`, `MEA`. Default `[NA, EU, APAC]` (fastest, most reliable pools). Add `LATAM`/`MEA` when the user cares about those markets.
    - `device`: `mobile` (default) or `desktop`.

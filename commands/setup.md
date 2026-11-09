@@ -1,5 +1,5 @@
 ---
-description: Configure and verify your UpRock API key, then confirm the scrape / search / sweep tools are working.
+description: Configure and verify your UpRock API key, then confirm the scrape / search / verify / video tools are working.
 ---
 
 # UpRock setup
@@ -11,11 +11,11 @@ Help the user get connected to UpRock and verify the plugin works.
 1. **API key.** This plugin reads the API key from its plugin configuration (`api_key`), which Claude Code prompts for when the plugin is enabled and stores securely in the OS keychain.
    - If the user has not set a key yet, tell them to:
      1. Sign up at **https://uprock.ai**.
-     2. Create a key at **https://uprock.ai/app/api-keys** and copy the full key (shown once). The MCP setup page at https://uprock.ai/app/mcp also shows the ready-to-paste `https://mcp.uprock.ai/<key>/mcp` URL.
+     2. Create a key at **https://uprock.ai/app/api-keys** and copy the full key (shown once).
      3. Re-run plugin configuration: `/plugin` → select **uprock** → **Configure**, and paste the key into **UpRock API Key**. (Advanced: set **MCP Base URL** only for staging/self-hosted; otherwise leave the default `https://mcp.uprock.ai`.)
-   - The key is injected into the bundled `uprock` MCP server URL automatically — the user never pastes it into a file.
+   - The key is sent to the bundled `uprock` MCP server in an `Authorization: Bearer` header automatically — the user never pastes it into a file.
 
-2. **Verify connectivity.** Once a key is set, confirm the `uprock` MCP tools are available (`crawl_fetch`, `web_research`, `sweep`, `resource_fetch`). If they are not, the key is missing/invalid or the plugin needs re-enabling — guide the user back to step 1.
+2. **Verify connectivity.** Once a key is set, confirm the `uprock` MCP tools are available (`crawl_fetch`, `web_research`, `verify`, `resource_fetch`, `video_search`, `video_moment`). If they are not, the key is missing/invalid or the plugin needs re-enabling — guide the user back to step 1.
 
 3. **Smoke test.** Run a tiny end-to-end check and report the result:
    - `crawl_fetch` on `https://example.com` with `method: GET`, `retries: 0` → expect `status: success` and a `crawl://` markdown/html resource.
@@ -26,6 +26,7 @@ Help the user get connected to UpRock and verify the plugin works.
    - `/uprock:crawl` — many pages of a site → markdown
    - `/uprock:search` — multi-engine, multi-region web search
    - `/uprock:sweep` — global uptime & performance test
+   - `/uprock:video` — find a moment in public video and read it
    - `/uprock:agent` — autonomous multi-source gathering
    Mention they can also just ask in plain language ("scrape this URL", "search the web for…", "is my site up worldwide?").
 
