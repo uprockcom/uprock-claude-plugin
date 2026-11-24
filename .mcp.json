@@ -2,7 +2,10 @@
   "mcpServers": {
     "uprock": {
       "type": "http",
-      "url": "${user_config.mcp_base_url}/${user_config.api_key}/mcp"
+      "url": "${user_config.mcp_base_url}/mcp",
+      "headers": {
+        "Authorization": "Bearer ${user_config.api_key}"
+      }
     }
   }
 }

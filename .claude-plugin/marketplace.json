@@ -5,12 +5,12 @@
     "name": "UpRock",
     "email": "developer@uprock.com"
   },
-  "description": "UpRock — web scraping, crawling, multi-region web search, and global uptime sweeps powered by a real worldwide device network.",
+  "description": "UpRock — web scraping, crawling, multi-region web search, global uptime checks and video search, powered by a real worldwide device network.",
   "plugins": [
     {
       "name": "uprock",
       "source": "./",
-      "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent.",
+      "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent and search over public video by moment.",
       "category": "development",
       "homepage": "https://uprock.ai",
       "license": "MIT",
