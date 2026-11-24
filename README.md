@@ -1,4 +1,4 @@
-# UpRock for Claude Code
+# UpRock for Claude Code and Grok Build
 
 **Scrape, search, crawl, and verify the web from a real global device network, and search public video by moment.**
 
@@ -30,6 +30,22 @@ You can also just ask in plain language — "scrape this URL", "search the web f
 3. When prompted at install/enable, paste your key into **UpRock API Key**. (Or later: `/plugin` → **uprock** → **Configure**.) It is stored securely in your OS keychain and injected into the MCP connection automatically — never written to a file.
 4. Run `/uprock:setup` to smoke-test the connection.
 
+### Grok Build
+
+The same plugin works in [Grok Build](https://docs.x.ai/build/overview). Grok doesn't prompt for plugin options, so it reads your key from the `UPROCK_API_KEY` environment variable instead.
+
+1. **Install:**
+   ```
+   grok plugin install https://github.com/uprockcom/uprock-claude-plugin --trust
+   ```
+2. **Get your API key** at **https://uprock.ai/app/api-keys** and export it in the shell you start Grok from:
+   ```
+   export UPROCK_API_KEY=your-key
+   ```
+3. Start `grok` and open `/mcps`: `uprock` should show as ready.
+
+Grok reads its own manifest in `.grok-plugin/`, which points at `.grok-plugin/mcp.json` (`Authorization: Bearer ${UPROCK_API_KEY}`). Claude Code ignores that folder and keeps using `.mcp.json` with the keychain option. The **MCP Base URL** option is Claude Code only.
+
 ### Self-hosted / staging
 Set the **MCP Base URL** plugin option to point at a different UpRock MCP host (default: `https://mcp.uprock.ai`). The plugin connects to `<base>/mcp` and sends your key in an `Authorization: Bearer` header.
 
@@ -49,6 +65,7 @@ The slash commands above are thin orchestration layers over these tools.
 ## Privacy & security
 
 - Your API key is stored in the OS keychain (Claude Code `sensitive` user config), never committed or written to project files.
+- In Grok Build, the key comes from your `UPROCK_API_KEY` environment variable. The plugin doesn't store it.
 - Requests are made to your configured UpRock MCP host only.
 
 ## Links
