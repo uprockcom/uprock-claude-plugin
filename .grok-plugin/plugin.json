@@ -1,0 +1,14 @@
+{
+  "name": "uprock",
+  "version": "1.2.0",
+  "description": "UpRock: Scrape, crawl, search & sweep the web from real devices worldwide — clean, LLM-ready markdown with JS rendering & geo-targeting. Powered by a real global device network, not datacenter proxies. Includes an autonomous research agent and search over public video by moment.",
+  "author": {
+    "name": "UpRock",
+    "email": "developer@uprock.com",
+    "url": "https://uprock.ai"
+  },
+  "homepage": "https://uprock.ai",
+  "repository": "https://github.com/uprockcom/uprock-claude-plugin",
+  "license": "MIT",
+  "mcpServers": "./.grok-plugin/mcp.json"
+}
